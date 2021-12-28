@@ -13,7 +13,14 @@ export default function App() {
       });
   };
   const onClickUser1 = () => {
-    alert("User1");
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/3")
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="App">
