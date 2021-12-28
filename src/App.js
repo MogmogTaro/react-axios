@@ -1,10 +1,17 @@
 import "./styles.css";
+import axios from "axios";
 
 export default function App() {
+  const onClickUsers = () => {
+    axios.get("");
+  };
+  const onClickUser1 = () => {
+    alert("User1");
+  };
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <button onClick={onClickUsers}>users</button>
+      <button onClick={onClickUser1}>id=1のusers</button>
     </div>
   );
 }
